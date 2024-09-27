@@ -1,23 +1,37 @@
+/* Estilizando o fundo com gradiente e desfoque */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background: #f4f4f4;
 }
 
-.container {
-    text-align: center;
-    background-color: #fff;
-    padding: 20px;
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+.cookie-box {
+    background-color: rgba(200, 200, 200, 0.9); /* Fundo semi-transparente */
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: center;
 }
 
 h1 {
+    margin-top: 0;
     color: #333;
 }
 
@@ -25,17 +39,39 @@ p {
     color: #666;
 }
 
-.button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #4CAF50;
-    color: white;
+a {
+    color: #007bff;
     text-decoration: none;
-    font-size: 18px;
-    border-radius: 5px;
-    transition: background-color 0.3s;
 }
 
-.button:hover {
-    background-color: #45a049;
+a:hover {
+    text-decoration: underline;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+.accept-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.accept-btn:hover {
+    background-color: #0056b3;
+}
+
+.close-link {
+    margin-left: 20px;
+    color: #007bff;
+    cursor: pointer;
+}
+
+.close-link:hover {
+    text-decoration: underline;
 }
